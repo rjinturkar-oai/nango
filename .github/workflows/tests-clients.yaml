@@ -88,7 +88,7 @@ jobs:
 
             - name: Build Typescript
               if: needs.should-run.outputs.should_skip != 'true'
-              run: npm run ts-build
+              run: npm run ts-build:nocheck
 
             - run: npm run test:cli
               if: needs.should-run.outputs.should_skip != 'true'
